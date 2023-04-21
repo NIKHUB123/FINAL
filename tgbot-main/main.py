@@ -32,7 +32,6 @@ from setup import bot, logger
 from webhook import app
 
 
-@app.on_message()
 async def echo(message: Message):
     logger.info(
         f'</code>@{message.from_user.username}<code> ({message.chat.id}) used echo:\n\n%s',
