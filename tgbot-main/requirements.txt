@@ -10,3 +10,7 @@ colorama==0.4.4
 aiogram==2.22.2
 APScheduler==3.9.1
 colorlog==6.6.0
+typing==3.7.4.3
+colorama==0.4.4
+bs4==0.0.1
+pytz==2022.6
