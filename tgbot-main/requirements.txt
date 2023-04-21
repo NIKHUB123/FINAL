@@ -7,3 +7,4 @@ datetime
 tg-logger
 pytz
 colorama==0.4.4
+aiogram==2.22.2
