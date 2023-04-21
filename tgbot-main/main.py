@@ -17,7 +17,7 @@ if __name__ == '__main__':
     else:
         bot.infinity_polling()
 
- import colorama
+import colorama
 from aiogram import executor, Dispatcher
 
 from tgbot.data.config import get_admins
