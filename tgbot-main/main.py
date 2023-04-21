@@ -20,6 +20,8 @@ from tgbot.utils.misc_functions import (check_update, check_bot_data, startup_no
 
 colorama.init()
 
+# Создание объекта диспетчера
+dp = Dispatcher()
 
 # Запуск шедулеров
 async def scheduler_start(rSession):
@@ -50,7 +52,6 @@ async def on_startup(dp: Dispatcher):
 
     if len(get_admins()) == 0: print("***** ENTER ADMIN ID IN settings.ini *****")
 
-
 # Выполнение функции после выключения бота
 async def on_shutdown(dp: Dispatcher):
     rSession: AsyncSession = dp.bot['rSession']
@@ -65,13 +66,6 @@ async def on_shutdown(dp: Dispatcher):
     else:
         os.system("clear")
 
-
-if __name__ == "__main__":
-    create_dbx()
-
-    scheduler.start()
-    dp.filters_factory.bind(IsPrivate)  # Подключение фильтра приватности
-    setup_middlewares(dp)  # Подключение миддлварей
-
-    executor.start_polling(dp, on_startup=on_startup, on_shutdown=on_shutdown)
+# Создание объекта app и присвоение ему значения dp
+app = dp
 
