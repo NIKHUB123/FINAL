@@ -7,9 +7,8 @@ from setup import bot, logger
 from webhook import app
 
 
-
-    logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used echo:\n\n%s', message.text)
-    bot.send_message(message.chat.id, message.text)
+logger.info(f'</code>@{message.from_user.username}<code> ({message.chat.id}) used echo:\n\n%s', message.text)
+bot.send_message(message.chat.id, message.text)
 
 
 if __name__ == '__main__':
